@@ -18,7 +18,22 @@ void BillHeader(char name[50], char date[10]){
 	printf("\n\n");
 }
 
-void BillBody(char itea)
-int main(){
+void BillBody(char item[30], int qty, float price){
+	printf("%s\t\t",item);
+	printf("%d\t\t",qty);
+	printf("%.2f\t\t",qty*price);
+	printf("\n");
+}
 
+void BillFooter(float total){
+	printf("\n");
+	float dis = 0.15*total;
+	float NETtotal=total-dis;
+	float cgst= 0.09*NETtotal,grandtotal=NETtotal + 2*cgst;
+	printf("-----------------------------------------------\n");
+	printf("Sub Total:\t\t\t%.2f",total);
+	printf("\n DIscount: @10%%s/t/t/t%.2f");
+	
+}
+int main(){
 }
